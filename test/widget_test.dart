@@ -81,67 +81,57 @@ import 'package:flutter_pertama/main.dart';
   
 // }
 
- void main() {
-  print("conditional");
-  var nilai = 80;
- 
-  if (nilai >= 80) {
-    print("Nilai A");
-  } else if (nilai >= 50) {
-    // 'nilai <= 80' is redundant here since 'else if' already implies 'nilai < 80'
-    print("Nilai B");
-  } else {
-    print("tidak lulus");
+// 
+
+void main() {
+//final keywoard = imutable / tidak bisa dirubah
+//const final
+//const
+//const String mahasiswa = "anam";
+//final
+
+  final String mahasiswa;
+  mahasiswa = "anam";
+  print(mahasiswa);
+
+//null safety
+//? ! late
+//? digunakan dia boleh null
+//String? jurusan;
+// Untuk di isi nanti
+  late String jurusan;
+
+  jurusan = "TI";
+//   ! digunakan untuk memaksa dijalnkan di run / yakin ada datanya
+  print(jurusan.length);
+
+//   perulangan looping
+//   for plus
+  for (int no = 1; no <= 5; no++) {
+    print(no);
   }
- 
-  print("__________");
-  nilai >= 80 ? print("A") : print("Tidak lulus");
- 
-  // Function section
-  print("function");
- 
-  hitungNilai();
-  hitungNilai1(75, 90);
-  var p = hitungNilai1(79, 100);
-  print(p); // Add this print to see the result of hitungNilai1
-  var n = hitungNilai2(mapel1: 50, mapel2: 2); // Include mapel2 for the named parameters
-  print(n); // Add this print to see the result of hitungNilai2
-  var o = hitungNilai3(79, 100); // hitungNilai3 should return a value to be stored in 'o'
-  print(o); // Add this print to see the result of hitungNilai3
-}
- 
-// Function to print a message
-void hitungNilai() {
-  print("Hitung Nilai");
-}
- 
-// Function with positional arguments
-hitungNilai1(mapel1, mapel2, [mapel3]) {
-  var nilaiAkhir;
-  if (mapel3 != null) {
-    nilaiAkhir = mapel1 / mapel2 + mapel3;
-  } else {
-    nilaiAkhir = mapel1 / mapel2;
+
+//   for minus
+  for (int no = 5; no >= 1; no--) {
+    print(no);
   }
-  return nilaiAkhir;
-}
- 
-// Function with named arguments
-hitungNilai2({mapel1, mapel2}) {
-  var nilaiAkhir;
-  if (mapel2 != null) {
-    nilaiAkhir = mapel1 / mapel2;
-  } else {
-    nilaiAkhir = mapel1;
+
+//   while
+  int no1 = 1;
+  int no2 = 5;
+  while (no1 <= no2) {
+    print(no1);
+    no1++;
   }
-  return nilaiAkhir; // Return the value to print it in main()
+
+//   do while
+  int no3 = 1;
+  int no4 = 5;
+  do {
+    print(no3);
+    no3++;
+  } while (no3 <= no4);
 }
- 
-// void
-int hitungNilai3(int mapel1, int mapel2) {
-  var nilaiAkhir = mapel1 + mapel2;
-  print(nilaiAkhir);
-  return nilaiAkhir; // Return the value to be used in main()
-}
+
 
 
